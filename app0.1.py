@@ -2,9 +2,12 @@
 import openpyxl
 
 # Abrir planilha
-planilha = openpyxl.load_workbook('CONVERSAO_HORAS_DECIMAIS.xlsx')
+planilha = openpyxl.load_workbook('CONVERSAO_HORAS_DECIMAIS_app1.xlsx')
 # Abrir pagina da planilha
 conversao_sheet = planilha['conversao']
+
+# Planilha de evento_simplificado.xls
+eventoSimplificado = planilha['evento_simplificado.xls']
 
 # Função para transformar horas em horas decimais
 def horasDecimais(horas, minutos):
@@ -24,10 +27,10 @@ for linha in conversao_sheet.iter_rows(min_row=2):
 
     if horas is not None and minutos is not None:
         horas_decimal = horasDecimais(horas, minutos)
-        # Adcionar as horas decimais de volta à planilha na coluna desejada (no caso 8)
-        conversao_sheet.cell(row=1, column=8, value="Horas Decimais")  # Adicione o cabeçalho
-        conversao_sheet.cell(row=linha[2].row, column=8, value=horas_decimal)
+        # Adcionar as horas decimais de volta à planilha na coluna desejada (no caso na coluna 6 de nome Valor)
+        eventoSimplificado.cell(row=linha[2].row, column=6, value=horas_decimal)
 
 # Salvar a planilha com os valores calculados
-planilha.save('CONVERSAO_HORAS_DECIMAIS_atualizado.xlsx')
-print('Valores calculados salvos na planilha "CONVERSAO_HORAS_DECIMAIS_atualizado.xlsx"')
+planilha.remove(conversao_sheet) # Excluindo planilha conversão
+planilha.save('evento_simplificado.xlsx')
+print('Valores calculados salvos na planilha "evento_simplificado.xls"')
