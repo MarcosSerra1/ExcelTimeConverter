@@ -14,9 +14,9 @@ Este é um script em Python que lê uma planilha Excel, converte horas e minutos
 
 3. Execute o script Python.
 
-4. O script lerá a planilha, calculará as horas decimais usando a função `horasDecimais()`, adicionará os valores calculados à planilha na coluna "Horas Decimais" e salvará a planilha atualizada com um nome diferente (no exemplo, 'CONVERSAO_HORAS_DECIMAIS_atualizado.xlsx').
+4. O script lerá a planilha, calculará as horas decimais usando a função `horasDecimais()`, adicionará os valores calculados à planilha na coluna "Valores" e salvará a planilha atualizada com um nome diferente (no exemplo, 'evento_simplificado.xlsx').
 
-5. O cabeçalho "Horas Decimais" será adicionado à primeira linha da coluna.
+5. Caso queria somente o executável está disponível em uma pasta zipada ''.
 
 ## Observações
 
