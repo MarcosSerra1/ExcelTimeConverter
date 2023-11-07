@@ -34,7 +34,6 @@ def horasDecimais(horas, minutos):
     return horas_decimal
 
 
-
 # acessando linha de hora e minutos
 for linha in conversao_sheet.iter_rows(min_row=2):
     horas = (linha[5].value) # Coluna das horas
