@@ -1,6 +1,6 @@
 # Conversor de Horas para Horas Decimais em Planilha Excel
 
-Este é um script em Python que lê uma planilha Excel, converte horas e minutos em horas decimais e, em seguida, adiciona esses valores de volta à planilha em uma coluna chamada "Horas Decimais". O script usa a biblioteca `openpyxl` para manipular a planilha.
+Este é um aplicativo em Python que lê uma planilha Excel, converte horas e minutos em horas decimais e, em seguida, adiciona esses valores de volta à planilha em uma coluna chamada "valor". O script usa a biblioteca `openpyxl` para manipular a planilha.
 
 ## Como Usar
 
@@ -10,21 +10,23 @@ Este é um script em Python que lê uma planilha Excel, converte horas e minutos
     pip install openpyxl
     ```
 
-2. Coloque a planilha Excel que deseja processar no mesmo diretório do script ou forneça o caminho correto para a planilha na linha `planilha = openpyxl.load_workbook('CONVERSAO_HORAS_DECIMAIS.xlsx')`.
+2. Execute o script Python.
 
-3. Execute o script Python.
+3. Uma interface gráfica será exibida, permitindo que você selecione a planilha Excel de entrada e escolha o local para salvar a planilha atualizada.
 
-4. O script lerá a planilha, calculará as horas decimais usando a função `horasDecimais()`, adicionará os valores calculados à planilha na coluna "Valores" e salvará a planilha atualizada com um nome diferente (no exemplo, 'evento_simplificado.xlsx').
+4. Clique no botão "Converter Horas" para processar a planilha.
 
-5. Caso queria somente o executável está disponível em uma pasta zipada 'CONVERSAO-DE-HORAS-PARA-HORAS-DECIMAIS.zip'.
+5. O script lerá a planilha, calculará as horas decimais usando a função `horas_decimais()`, adicionará os valores calculados à planilha na coluna "valores" e salvará a planilha atualizada no local escolhido.
+
+6. Um executável autônomo também está disponível na pasta 'CONVERSAO-DE-HORAS-PARA-HORAS-DECIMAIS.zip'.
 
 ## Observações
 
-- Certifique-se de que a planilha de entrada ('CONVERSAO_HORAS_DECIMAIS.xlsx' no exemplo) tenha colunas chamadas 'Horas' e 'Minutos' para que o script possa ler os valores corretamente.
+- Certifique-se de que a planilha de entrada tenha colunas chamadas 'Horas' e 'Minutos' para que o script possa ler os valores corretamente.
 
-- Este código assume que a planilha de saída será salva com um nome diferente ('evento_simplificado.xlsx' no exemplo) para evitar a sobregravação da planilha original.
+- Personalize os nomes dos arquivos conforme necessário para sua planilha específica.
 
-- Personalize os nomes dos arquivos e as colunas conforme necessário para sua planilha específica.
+- O script agora inclui uma interface gráfica que facilita a seleção da planilha de entrada e o local de saída.
 
 # Autores
 
