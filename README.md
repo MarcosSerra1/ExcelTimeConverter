@@ -4,10 +4,11 @@ Este é um aplicativo em Python que lê uma planilha Excel, converte horas e min
 
 ## Como Usar
 
-1. Certifique-se de ter a biblioteca `openpyxl` instalada. Você pode instalá-la usando o seguinte comando:
+1. Certifique-se de ter as bibliotecas `openpyxl` e `tkinter` instaladas. Você pode instalá-las usando os seguintes comandos:
 
     ```bash
     pip install openpyxl
+    pip install tk
     ```
 
 2. Execute o script Python.
