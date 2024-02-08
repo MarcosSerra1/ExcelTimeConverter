@@ -1,4 +1,5 @@
 import tkinter as tk
+
 from utils.calcular_horas_decimais import calcular_horas_decimais
 
 # Configuração da janela principal

@@ -3,7 +3,8 @@ import sys
 from cx_Freeze import Executable, setup
 
 # Dependencies are automatically detected, but it might need fine tuning.
-build_exe_options = {"packages": ["os"], "includes": ["tkinter", "openpyxl", "utils"]}
+build_exe_options = {"packages": ["os"],
+                     "includes": ["tkinter", "openpyxl", "utils"]}
 
 # GUI applications require a different base on Windows (the default is for
 # a console application).
@@ -14,7 +15,7 @@ if sys.platform == "win32":
 setup(
     name="ExcelTimeConverter",
     version="2.5",
-    description="Este é um aplicativo em Python que lê uma planilha Excel, converte horas e minutos em horas decimais e, em seguida, adiciona esses valores de volta à planilha em uma coluna chamada \"valor\". O script usa a biblioteca `openpyxl` para manipular a planilha.",
+    description="Conversor de horas para decimal",
     options={"build_exe": build_exe_options},
     executables=[Executable("main.py", base=base)]
 )
