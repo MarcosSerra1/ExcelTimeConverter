@@ -14,7 +14,7 @@ if sys.platform == "win32":
 
 setup(
     name="ExcelTimeConverter",
-    version="2.5",
+    version="3.0",
     description="Conversor de horas para decimal",
     options={"build_exe": build_exe_options},
     executables=[Executable("main.py", base=base)]
