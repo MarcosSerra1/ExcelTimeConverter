@@ -1,5 +1,6 @@
 from tkinter import filedialog, messagebox
 from utils.converte_tempo_para_decimal import converte_tempo_para_decimal
+from utils.copiar_dados import copiar_dados
 import openpyxl
 
 
@@ -40,6 +41,29 @@ def calcular_horas_decimais():
     conversao_sheet = planilha['conversao']  # Obtendo a planilha 'conversao'
     evento_simplificado_sheet = planilha['evento_simplificado.xls']  # Obtendo a planilha 'evento_simplificado.xls'
 
+
+     # Define a linha inicial onde os dados serão colados na planilha de destino
+    linha_destino = 2
+
+    # Itera sobre as linhas da planilha de origem e copia os dados para a planilha de destino
+    for linha in conversao_sheet.iter_rows(min_row=2):
+        codigo = linha[0].value
+        nome_funcionario = linha[1].value
+        tipo_de_calculo = linha[2].value
+        evento = linha[3].value
+        valor_manual = linha[4].value
+
+        # colocando os dados na outra planilha
+        evento_simplificado_sheet.cell(row=linha_destino, column=1, value=codigo)
+        evento_simplificado_sheet.cell(row=linha_destino, column=2, value=nome_funcionario)
+        evento_simplificado_sheet.cell(row=linha_destino, column=3, value=tipo_de_calculo)
+        evento_simplificado_sheet.cell(row=linha_destino, column=4, value=evento)
+        evento_simplificado_sheet.cell(row=linha_destino, column=5, value=valor_manual)
+        
+        # incrementa a linha de destino para a próxima iteração
+        linha_destino += 1
+
+
     # Iterando pelas linhas da planilha 'conversao'
     for linha in conversao_sheet.iter_rows(min_row=2):  # Começando da segunda linha
         horas = linha[5].value  # Obtendo o valor da coluna de horas
@@ -52,10 +76,13 @@ def calcular_horas_decimais():
             # Atualizando a célula na planilha 'evento_simplificado.xls' com o valor decimal calculado
             evento_simplificado_sheet.cell(row=linha[2].row, column=6, value=hora_decimal)
 
-    # Removendo a planilha 'conversao'
-    planilha.remove(conversao_sheet)
+
     # Solicitando ao usuário o local para salvar a planilha modificada
     output_path = filedialog.asksaveasfilename(title="Salvar planilha", filetypes=[("Planilha Excel", "*.xlsx")])
+
+    # Removendo a planilha 'conversao'
+    planilha.remove(conversao_sheet)
+
     # Salvando a planilha modificada
     planilha.save(output_path)
 

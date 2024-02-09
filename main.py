@@ -4,7 +4,7 @@ from utils.calcular_horas_decimais import calcular_horas_decimais
 
 # Configuração da janela principal
 root = tk.Tk()
-root.title("Calculadora de Horas Decimais")
+root.title("Conversor de Horas para Decimais")
 root.geometry("400x200")  # Definindo o tamanho da janela
 
 # Botão para iniciar o cálculo
