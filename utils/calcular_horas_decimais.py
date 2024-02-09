@@ -1,6 +1,5 @@
 from tkinter import filedialog, messagebox
 from utils.converte_tempo_para_decimal import converte_tempo_para_decimal
-from utils.copiar_dados import copiar_dados
 import openpyxl
 
 
