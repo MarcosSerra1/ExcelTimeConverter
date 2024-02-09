@@ -15,7 +15,7 @@ O **ExcelTimeConverter** é uma ferramenta que permite converter tempos registra
 
 ## Como Usar
 
-1. Faça o download do arquivo executável do bot no [repositório do GitHub](https://github.com/MarcosSerra1/ExcelTimeConverter/blob/main/ExcelTimeConverter_exec.zip).
+1. Faça o download do arquivo executável do bot no [repositório do Driver]([https://github.com/MarcosSerra1/ExcelTimeConverter/blob/main/ExcelTimeConverter_exec.zip](https://drive.google.com/file/d/1Z89wVRcU2Fr-DWwlp9DcGGHihyNf04zX/view?usp=sharing)).
 2. Execute o arquivo baixado para iniciar o bot.
 3. Selecione a planilha Excel que contém os registros de tempo a serem convertidos. Disponibilizado junto com o Bot.
 4. Aguarde enquanto o bot realiza a conversão dos tempos.
