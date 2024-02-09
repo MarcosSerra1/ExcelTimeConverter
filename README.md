@@ -28,7 +28,7 @@ O **ExcelTimeConverter** é uma ferramenta que permite converter tempos registra
 
 ## Licença
 
-Este projeto está licenciado sob a [Licença MIT](link_para_a_licença).
+Este projeto está licenciado sob a [Licença MIT](https://github.com/MarcosSerra1/ExcelTimeConverter/blob/main/LICENSE).
 
 ---
 © 2024 ExcelTimeConverter. Criado por [Marcos Serra.](https://github.com/marcosserra1)
